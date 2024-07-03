@@ -81,6 +81,7 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+# T7*5a;4&6<h.
 
 
 # Password validation
