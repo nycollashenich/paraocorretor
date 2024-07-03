@@ -31,6 +31,18 @@ class Corretor(Base):
     class Meta:
         verbose_name = 'Corretor'
 
-
         def __str__(self) -> str:
             return self.nome
+        
+class Imovel(Base):
+    rua_avenida = models.CharField('Rua/Avenida', max_length=100)
+    preco = models.CharField('Preço', max_length=100)
+    cidade = models.CharField('Cidade', max_length=100)
+    imagem = StdImageField('Imagem', upload_to=get_file_path, variations={'thumb': {'width': 368, 'height': 256, 'crop': True}})
+
+    class Meta:
+        verbose_name = 'Imóvel'
+
+        def __str__(self):
+            return self.rua_avenida
+        
