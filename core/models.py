@@ -1,6 +1,7 @@
 from django.db import models
 from stdimage import StdImageField
 import uuid
+from django.utils.text import slugify
 
 def get_file_path(_instance, filename): #_indicar que ele não é usado na função
     extensao = filename.split('.')[-1]
@@ -40,9 +41,5 @@ class Imovel(Base):
     cidade = models.CharField('Cidade', max_length=100)
     imagem = StdImageField('Imagem', upload_to=get_file_path, variations={'thumb_casas': {'width': 368, 'height': 256, 'crop': True}})
 
-    class Meta:
+    class Meta():
         verbose_name = 'Imóvel'
-
-        def __str__(self):
-            return self.rua_avenida
-        

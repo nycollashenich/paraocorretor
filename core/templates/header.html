@@ -24,7 +24,7 @@
                     <a href="#">Imóveis</a>
                     <ul>
                     {% for i in imovel %}
-                        <li><a href="{% url 'descricaoimovel' i.pk %}">{{ i.rua_avenida}}</a></li>
+                        <li><a href="{% url 'descricaoimovel' %}">{{ i.rua_avenida}}</a></li>
                     {% endfor %}
                     </ul>
                 </li>
