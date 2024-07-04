@@ -1,15 +1,15 @@
 {% load static %}
 <section class="carousel">
     <div class="reel">
-
+        {% for i in imovel %}
         <article>
-            {% comment %} {% for  in  %}{% endfor %} {% endcomment %}
-            <a href="#" class="image featured"><img src="{% static 'images/pic01.jpg' %}" alt="" /></a>
+            <img src="{{ i.imagem.thumb_casas.url }}" alt="" />
             <header>
-                <h3><a href="#">Pulvinar sagittis congue</a></h3>
+                <h3><a href="#">{{ i.rua_avenida }}</a></h3>
             </header>
-            <p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
+            <p>R${{ i.preco }}</p>
+            <p>{{ i.cidade }}</p>
         </article>
-
+        {% endfor %}
     </div>
 </section>

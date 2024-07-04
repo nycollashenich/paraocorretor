@@ -26,7 +26,7 @@ class Corretor(Base):
     missao = models.CharField('Missão', max_length=100)
     visao = models.CharField('Visão', max_length=100)
     valores = models.CharField('Valores', max_length=100)
-    imagem = StdImageField('Imagem', upload_to=get_file_path, variations={'thumb': {'width': 480, 'height': 480, 'crop': True}})
+    imagem = StdImageField('Imagem', upload_to=get_file_path, variations={'thumb': {'width': 1200, 'height': 551, 'crop': True}})
 
     class Meta:
         verbose_name = 'Corretor'
@@ -38,7 +38,7 @@ class Imovel(Base):
     rua_avenida = models.CharField('Rua/Avenida', max_length=100)
     preco = models.CharField('Preço', max_length=100)
     cidade = models.CharField('Cidade', max_length=100)
-    imagem = StdImageField('Imagem', upload_to=get_file_path, variations={'thumb': {'width': 368, 'height': 256, 'crop': True}})
+    imagem = StdImageField('Imagem', upload_to=get_file_path, variations={'thumb_casas': {'width': 368, 'height': 256, 'crop': True}})
 
     class Meta:
         verbose_name = 'Imóvel'

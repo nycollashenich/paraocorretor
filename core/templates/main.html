@@ -2,9 +2,10 @@
 <div class="wrapper style2">
 
     <article id="main" class="container special">
-        <a href="#" class="image featured"><img src="{% static 'images/pic06.jpg' %}" alt="" /></a>
-        
         {% for c in corretor %}
+        <a href="#" class="image featured"><img src="{{ c.imagem.thumb.url}}" alt="" /></a>
+        
+        
         <header>
             <h2><a href="#">Quem sou eu?</a></h2>
         </header>
