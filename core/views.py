@@ -1,5 +1,5 @@
 from typing import Any
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, DetailView
 from .models import Corretor, Imovel
 
 class IndexView(TemplateView):
@@ -11,3 +11,7 @@ class IndexView(TemplateView):
         context ['imovel'] = Imovel.objects.all()
         return context
 
+class ImovelDetailView(DetailView):
+    model = Imovel
+    template_name = 'descricaoimovel.html'
+    context_object_name = 'imovel'

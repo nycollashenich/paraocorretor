@@ -5,7 +5,7 @@
         <article>
             <img src="{{ i.imagem.thumb_casas.url }}" alt="" />
             <header>
-                <h3><a href="#">{{ i.rua_avenida }}</a></h3>
+                <h3><a href="{% url 'descricaoimovel' i.pk %}">{{ i.rua_avenida }}</a></h3>
             </header>
             <p>R${{ i.preco }}</p>
             <p>{{ i.cidade }}</p>

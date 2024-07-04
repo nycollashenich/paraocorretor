@@ -12,7 +12,7 @@
                 {% endfor %}
             </header>
             <footer>
-                <a href="#banner" class="button circled scrolly">Start</a>
+                <a href="#banner" class="button circled scrolly">Abrir</a>
             </footer>
         </div>
 
@@ -21,26 +21,13 @@
             <ul>
                 <li><a href="{% url 'index' %}">Início</a></li>
                 <li>
-                    <a href="#">Menu</a>
+                    <a href="#">Imóveis</a>
                     <ul>
-                        <li><a href="#">...</a></li>
-                        <li><a href="#">...</a></li>
-                        <li><a href="#">...</a></li>
-                        <li>
-                            <a href="#">And a submenu &hellip;</a>
-                            <ul>
-                                <li><a href="#">...</a></li>
-                                <li><a href="#">...</a></li>
-                                <li><a href="#">...</a></li>
-                                <li><a href="#">...</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">...</a></li>
+                    {% for i in imovel %}
+                        <li><a href="{% url 'descricaoimovel' i.pk %}">{{ i.rua_avenida}}</a></li>
+                    {% endfor %}
                     </ul>
                 </li>
-                <li><a href="#">Left Sidebar</a></li>
-                <li><a href="right-sidebar.html">Right Sidebar</a></li>
-                <li><a href="no-sidebar.html">No Sidebar</a></li>
             </ul>
         </nav>
 
